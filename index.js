@@ -51,6 +51,9 @@ function getErrorMessage(error) {
     if (error.code == "auth/invalid-credential") {
         return "Email ou senha inválidos";
     }
+    if (error.code == "auth/missing-email") {
+        return "Preencha o campo email";
+    }
     return error.message;
 }
 
