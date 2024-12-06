@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Home - Controle de gastos</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <header class="header">
+        <img src="../../img/logo branca.png" alt="Logo do App" class="app-logo">
+        <button type="button" class="clear" onclick="logout()">
+            Sair
+        </button>
+    </header>
+    <div class="button-container">
+        <button class="fab" id="add-expense-button" onclick="newExpense()">Adicionar Despesa</button>
+        <button class="fab" id="add-income-button" onclick="newIncome()">Adicionar Entrada</button>
+    </div>
+    <ol id="transactions"></ol>
+</body>
+
+<link rel="stylesheet" href="../../global.css">
+<link rel="stylesheet" href="home.css">
+
+<script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore-compat.js"></script>
+<script src="../../firebase-init.js"></script>
+<script src="../../auth-guard.js"></script>
+
+<script src="../../loading.js"></script>
+<script src="../../services/transaction.service.js"></script>
+<script src="home.js"></script>
+
+</html>

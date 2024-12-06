@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Controle de gastos</title>
+</head>
+
+<body class="centralize">
+    <div class="header">
+        <img src="../img/logo verde.png" alt="Logo do App" class="app-logo">
+        <h1>Controle de gastos</h1>
+    </div>
+    <div>
+        <h2 class="login">Login</h2>
+    </div>
+    <div class="container">
+        <form>
+            <div class="form-field">
+                <div><label>Email</label></div>
+                <input type="email" class="width-280" name="email" id="email" placeholder="seu@email.com" onchange="onChangeEmail()"/>
+                <div class="error" id="email-required-error">Email é obrigatório</div>
+                <div class="error" id="email-invalid-error">Email é inválido</div>
+            </div>
+            <div class="form-field">
+                <div><label>Senha</label></div>
+                <input type="password" class="width-280" name="password" id="password" placeholder="Senha" onchange="onChangePassword()"/>
+                <div class="error" id="password-required-error">Senha é obrigatória</div>
+            </div>
+            <div class="tooltip-container">
+                <button type="button" class="clear" id="recover-password-button" onclick="recoverPassword()">Recuperar senha</button>
+                <span class="tooltiptext">Preencha o e-mail no campo acima para enviarmos um link de recuperação de senha</span>
+            </div>
+            <div>
+                <button type="button" class="solid" id="login-button" onclick="login()">Entrar</button>
+            </div>
+            <div>
+                <button type="button" class="outline" onclick="register()">Registrar</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="global.css">
+
+<script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth-compat.js"></script>
+<script src="firebase-init.js"></script>
+
+<script src="index.js"></script>
+<script src="loading.js"></script>
+<script src="validations.js"></script>
+
+</html>

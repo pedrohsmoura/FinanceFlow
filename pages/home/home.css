@@ -1,0 +1,100 @@
+body {
+    height: 100vh;
+}
+
+ol {
+    list-style-type: none;
+    padding: 0;
+}
+ol li {
+    cursor: pointer;
+    background: white;
+    padding: 8px 16px;
+    border-bottom: 1px solid gray;
+}
+ol li:hover {
+    opacity: 0.8;
+}
+ol li.expense {
+    border-left: 10px solid red;
+}
+ol li.income {
+    border-left: 10px solid green;
+}
+ol li:hover button.danger {
+    display: block;
+}
+
+button.danger {
+    width: auto;
+    float: right;
+    display: none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; 
+    top: 100px; 
+    width: 100%;
+}
+
+.fab {
+    background: #65736a;
+    color: white;
+    border: none;
+    border-radius: 8px; 
+    width: auto;
+    height: 56px;
+    padding: 0 20px; 
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold; /* Adiciona negrito ao texto */
+    cursor: pointer;
+    text-transform: uppercase; 
+    margin: 0 100px; /* Espaçamento entre os botões */
+}
+
+.fab.fixed.bottom.left {
+    left: 20px;
+}
+
+.fab.fixed.bottom.right {
+    right: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 35px 20px;
+    background-color: #65736a;
+}
+
+header.app-logo {
+    position: absolute;
+    left: 914px;
+    max-width: 1px; 
+    width: 100px; 
+    height: auto; 
+}
+
+button.clear {
+    position: absolute;
+    right: 20px;
+    background-color: #e05a5a; 
+    color: rgb(253, 253, 253);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+button.clear:hover {
+    background-color: #6e1010; 
+}

@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Transaçao - Controle de gastos</title>
+    <meta charset="UTF-8">
+</head>
+
+<body class="centralize">
+    <div class="container">
+        <form>
+            <div class="form-field">
+                <div><label>Data da transaçao *</label></div>
+                <input type="date" onchange="onChangeDate()" id="date">
+                <div class="error" id="date-required-error">
+                    Data é obrigatória/inválida
+                </div>
+            </div>
+            <div class="form-field">
+                <div><label for="currency">Moeda *</label></div>
+                <select id="currency">
+                    <option value="USD">Dólar</option>
+                    <option value="EUR">Euro</option>
+                    <option value="BRL" selected>Real</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <div><label for="amount">Valor *</label></div>
+                <input type="number" id="amount" placeholder="Valor">
+            </div>
+            <div class="form-field">
+                <div><label for="transaction-type">Tipo de Transação *</label></div>
+                <select id="transaction-type">
+                    <option value="Transporte">Transporte</option>
+                    <option value="Alimentação">Alimentação</option>
+                    <option value="Educação">Educação</option>
+                    <option value="Saúde">Saúde</option>
+                    <option value="Lazer">Lazer</option>
+                    <option value="Emprestimos">Emprestimos</option>
+                    <option value="Outros">Outros</option>
+                </select>
+                <div class="error" id="transaction-type-required-error" style="display: none;">
+                    Tipo de transação é obrigatória
+                </div>
+            </div>
+            <div class="form-field">
+                <div><label for="description">Descrição</label></div>
+                <input type="text" id="description">
+            </div>
+            <button type="button" class="solid" id="save-button">
+                Salvar
+            </button>
+            <button type="button" class="clear" id="cancel-button" onclick="cancel()">Cancelar</button>
+        </form>
+    </div>  
+</body>
+
+<link rel="stylesheet" href="../../global.css">
+<link rel="stylesheet" href="transaction-Expense.css">
+
+<script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore-compat.js"></script>
+<script src="../../firebase-init.js"></script>
+<script src="../../auth-guard.js"></script>
+<script src="../../loading.js"></script>
+<script src="../../services/transaction.service.js"></script>
+<script src="transaction-Expense.js"></script>
+
+</html>

@@ -1,0 +1,20 @@
+body {
+    height: 100vh;
+}
+form {
+    width: 300px;
+}
+input {
+    border: none;
+}
+button {
+    margin-bottom: 10px;
+}
+
+.cadastro {
+    color: #65736a;
+}
+
+.width-280 {
+    width: 280px;
+}

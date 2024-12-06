@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    background: #f6f4f3;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.container {
+    border: 2px solid #65736a; /* Cor da borda */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 20px;
+    background-color: #65736a; 
+    padding: 35px 100px;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    background-color: #65736a;
+}
+header button {
+    width: auto;
+}
+
+.centralize {
+    display: flex;
+    flex-direction: column; /* Adicione esta linha */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-field {
+    margin-bottom: 10px;
+}
+
+label {
+    color: white; /* Cor branca */
+    font-weight: bold; /* Negrito */
+    font-size: 24px;
+}
+
+input,
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+input[type="radio"] {
+    width: auto;
+}
+
+.loading {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+.loading label {
+    font-size: 24px;
+}
+
+button {
+    cursor: pointer;
+}
+button:active {
+    opacity: 0.8;
+}
+button[disabled] {
+    opacity: 0.8;
+}
+
+button.clear {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+.clear {
+    background: transparent;
+    border: none;
+    color: white;
+}
+.solid {
+    background: #ffffff;
+    border: none;
+    color: #65736a;
+}
+.outline {
+    background: #ffffff;
+    border: none;
+    color: #65736a;
+    padding: 5px 2px;
+}
+.outline.danger {
+    color: red;
+    border-color: red;
+}
+
+.error {
+    background:transparent;
+    color: red;
+    display: none;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header .app-logo {
+    max-width: 130px; /* Ajuste o tamanho conforme necessário */
+    margin-bottom: 1px;
+}
+
+.header h1 {
+    color: #65736a; /* Ajuste a cor conforme necessário */
+    font-size: 35px; /* Ajuste o tamanho conforme necessário */
+}
+

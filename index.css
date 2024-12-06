@@ -1,0 +1,72 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa; /* Cor de fundo da página */
+}
+
+.container {
+    border: 2px solid green; /* Cor da borda */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 20px;
+    background-color: white; /* Cor de fundo do container */
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+input {
+    border: none;
+}
+
+button {
+    margin-bottom: 10px;
+}
+
+.login {
+    color: #65736a;
+}
+
+.tooltip-container {
+    position: relative;
+}
+
+.tooltip-container .tooltiptext {
+    visibility: hidden;
+    width: 220px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -110px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip-container .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip-container:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.width-280 {
+    width: 280px;
+}
